@@ -11,11 +11,24 @@
 		<div id="message" class="hidden"></div>
 		
 		<form action="" method="post" name="Login_Form" class="form-signin" id="form-edit">       
-		    <h3 class="form-signin-heading">E - HLC Tracker</h3>
+		    <h3 class="form-signin-heading">Employee Information</h3>
 			  <hr class="colorgraph"><br>
-			  <input type="text" class="form-control" name="Username" id="Username" placeholder="Username" required="required" autofocus="" />
-			  <input type="password" class="form-control" name="Password" id="Password" placeholder="Password" required="required"/>     		  
-			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" id="Submit"  value="Login" type="Submit">Login</button>  			
+			  <input type="text" class="form-control" name="Agentname" id="Agentname" placeholder="Agent Name*" required="required" autofocus="" />
+			  <input type="text" class="form-control" name="Empid" id="Empid" placeholder="Emp ID*" required="required"/>   
+			<input type="text" class="form-control" name="Designation" id="Designation" placeholder="Designation*" required="required" autofocus="" />
+			<select class="form-control" name="Department" id="Department" required="required">
+			<option value="">Select Department</option>
+			<option value="1">Customer service</option>
+			<option value="2">Operations</option>
+			</select>
+			<select class="form-control" name="Campaign" id="Campaign" required="required">
+			<option value="">Select Campaign</option>
+			<option value="1">Health</option>
+			<option value="2">Life</option>
+			<option value="3">Car</option>
+			</select>
+			  <input type="text" class="form-control" name="Supervisor" id="Supervisor" placeholder="Supervisor" required="required"/><br/> <div class="clearfix"></div>  			  
+			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" id="Submit"  value="Login" type="Submit">Submit</button>  			
 		</form>			
 	</div>
 </div>
@@ -26,69 +39,15 @@
 
 
 <script type="text/javascript">
-var stoargeAvaiable = false;
-/* set userName and password to localstorage */
-if (typeof(Storage) !== "undefined") {
-	stoargeAvaiable = true;
-	localStorage.setItem("userName", "admin");
-	localStorage.setItem("password", "123");
-	//alert(localStorage.getItem("password"));
-} else {
-$("#message").removeClass("hidden");
-$("#message").html('<div class="alert alert-warning alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">X</a><strong>Warning!</strong> Sorry! No Web Storage support..</div>');
+if(typeof(localStorage.getItem("token"))!== "undefined")
+{
+	
 }
-$(document).ready(function()
-{
-if(stoargeAvaiable)
-{
-	$("#form-signin").click(function(e){.
-	alert($("#Password").val());
-	e.preventDefault();
-		if($("#Username").val()!="")
-		{
-		
-			if($("#Password").val()!="")
-			{
-				if(localStorage.getItem("userName")==$("#Username").val())
-				{
-					
-					if(localStorage.getItem("password")==$("#Password").val())
-					{
-					$("#message").addClass("hidden");
-						window.location.href('page2.html);
-					}
-					else{
-					$("#message").removeClass("hidden");
-					$("#message").html('<div class="alert alert-danger alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">X</a>Password is incorrect</div>');
-					}
-				}else{
-				$("#message").removeClass("hidden");
-				$("#message").html('<div class="alert alert-danger alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">X</a>Username is incorrect</div>');
-				}
-			}else{
-				$("#message").removeClass("hidden");
-			$("#message").html('<div class="alert alert-danger alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">X</a>Password is required</div>');
-			}
-		}else{
-			$("#message").removeClass("hidden");
-			$("#message").html('<div class="alert alert-danger alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">X</a>Username is required</div>');
-		}
-	});
+else{
+	alert("Invalid login");
+	localStorage.setItem("token","");
+	window.location.href ='index.html';
 }
-
-
-$(".form-control").keyup(function()
-{
-	$("#message").addClass("hidden");
-})
-
-$(documnt).on('click','.close',function(e){
-alert("dff");
-	e.preventDefault();
-	$("#message").addClass("hidden");
-});
-		
-});
 
 </script>
 </body>

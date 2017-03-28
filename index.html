@@ -52,6 +52,7 @@ if(stoargeAvaiable)
 					if(localStorage.getItem("password")==$("#Password").val())
 					{
 						$("#message").addClass("hidden");
+						localStorage.setItem("token","ok");
 						window.location.href ='page2.html';
 					}
 					else{
