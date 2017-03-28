@@ -36,18 +36,24 @@
 
 <script type="text/javascript" src="lib/jquery-3.2.0.min.js"></script>
 <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="lib/jquery.validate.js"></script>
 
 <script type="text/javascript">
-if(typeof(localStorage.getItem("token"))!== "undefined")
+$(document).ready(function()
 {
-	
-}
-else{
-	alert("Invalid login");
-	localStorage.setItem("token","");
-	window.location.href ='index.html';
-}
+	if(typeof(localStorage.getItem("token"))!== "undefined")
+	{
+		$("#form-edit").validate({
+                    errorPlacement: function (error, element) {
+                    }
+                });
+	}
+	else{
+		alert("Invalid login");
+		localStorage.setItem("token","");
+		window.location.href ='index.html';
+	}
+});
 
 </script>
 </body>

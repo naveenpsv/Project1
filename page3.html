@@ -1,0 +1,201 @@
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="custom.css">
+</head>
+<body>
+
+
+    <div class = "container">
+	<div class="wrapper">
+		<div id="message" class="hidden"></div>
+		
+		<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Welcome to E-Health Insurance Tracker - <span id="name"></span></legend>
+
+
+<div class="row">
+<div class="col-md-6">
+<div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="fn">Application ID</label>  
+  <div class="col-md-6">
+  <input id="fn" name="fn" type="text" placeholder="Allow Alpha/Numeric/Spl Characters" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="ln">Mobile No</label>  
+  <div class="col-md-6">
+  <input id="ln" name="ln" type="text" placeholder="Allow only Numeric Value" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cmpny">Partner</label>  
+  <div class="col-md-6">
+  <input id="cmpny" name="cmpny" type="text" placeholder="Allow Alpha & Numeric" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">Premium (Excl. Tax)</label>  
+  <div class="col-md-6">
+  <input id="email" name="email" type="text" placeholder="Allow only Numeric Value" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="add1">Premium (Incl. Tax)</label>  
+  <div class="col-md-6">
+  <input id="add1" name="add1" type="text" placeholder="Allow only Numeric Value" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="add2">Payment Mode</label>  
+  <div class="col-md-6">
+  <input id="add2" name="add2" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="city">Direct/Link Payment</label>  
+  <div class="col-md-6">
+  <input id="city" name="city" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="fn">Customer Name</label>  
+  <div class="col-md-6">
+  <input id="fn" name="fn" type="text" placeholder="Allow Alpha/Numeric/Spl Characters" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="ln">Location</label>  
+  <div class="col-md-6">
+  <input id="ln" name="ln" type="text" placeholder="Allow only Numeric Value" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cmpny">DOB</label>  
+  <div class="col-md-6">
+  <input id="cmpny" name="cmpny" type="text" placeholder="Allow Alpha & Numeric" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">SUm ASSURED</label>  
+  <div class="col-md-6">
+  <input id="email" name="email" type="text" placeholder="Allow only Numeric Value" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="add1">TENURE</label>  
+  <div class="col-md-6">
+  <input id="add1" name="add1" type="text" placeholder="Allow only Numeric Value" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="add2">PLAN NAME</label>  
+  <div class="col-md-6">
+  <input id="add2" name="add2" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="city">PROPOSAL NO</label>  
+  <div class="col-md-6">
+  <input id="city" name="city" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="city">NO OF LIVES</label>  
+  <div class="col-md-6">
+  <input id="city" name="city" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-8 control-label" for="submit"></label>
+  <div class="col-md-8 col-sm-offset-5">
+    <button id="submit" name="submit" class="btn btn-primary">SAVE</button>
+	<button id="submit" name="submit" class="btn btn-primary">SUBMIT</button>
+  </div>
+</div>
+
+</fieldset>
+</form>		
+	</div>
+</div>
+
+
+<script type="text/javascript" src="lib/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/jquery.validate.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+	if(typeof(localStorage.getItem("token"))!== "undefined")
+	{
+		$("#form-edit").validate({
+                    errorPlacement: function (error, element) {
+                    }
+                });
+	}
+	else{
+		alert("Invalid login");
+		localStorage.setItem("token","");
+		window.location.href ='index.html';
+	}
+});
+
+</script>
+</body>
+</html>
