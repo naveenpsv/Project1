@@ -10,7 +10,7 @@
 	<div class="wrapper">
 		<div id="message" class="hidden"></div>
 		
-		<form action="" method="post" name="Login_Form" class="form-signin" id="form-edit">       
+		<form action="page3.html" method="post" name="Login_Form" class="form-signin" id="form-edit">       
 		    <h3 class="form-signin-heading">Employee Information</h3>
 			  <hr class="colorgraph"><br>
 			  <input type="text" class="form-control" name="Agentname" id="Agentname" placeholder="Agent Name*" required="required" autofocus="" />
@@ -63,7 +63,7 @@ $(document).ready(function()
 												if($("#Supervisor").val() != "")
 												{
 													localStorage.setItem("Agentname",$("#Agentname").val());
-													location.href ='index.html';
+													window.location.href ='page3.html';
 												}
 												else{
 													$("#message").removeClass("hidden");
