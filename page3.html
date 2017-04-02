@@ -143,25 +143,7 @@
 <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/jquery.validate.js"></script>
 <script type="text/javascript">
-$(document).ready(function()
-{
-	if(typeof(localStorage.getItem("token"))!== "undefined")
-	{
-		$("#form-page3").validate({
-                    errorPlacement: function (error, element) {
-                    }
-                });
-				
-				$("#name").text(localStorage.getItem("Agentname"));
-	}
-	else{
-		alert("Invalid login");
-		localStorage.setItem("token","");
-		window.location.href ='index.html';
-	}
-	
-	
-});
+
 
 </script>
 </body>
