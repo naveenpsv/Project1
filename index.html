@@ -8,9 +8,9 @@
 
     <div class = "container">
 	<div class="wrapper">
-		<div id="message" class="hidden"></div>
+		<div id="message" class="error_message hidden"></div>
 		
-		<form action="" method="post" name="Login_Form" class="form-signin" id="form-signin">       
+		<form action="page2.html" method="post" name="Login_Form" class="form-signin" id="form-signin">       
 		    <h3 class="form-signin-heading">E - HLC Tracker</h3>
 			  <hr class="colorgraph"><br>
 			  <input type="text" class="form-control" name="Username" id="Username" placeholder="Username" required="required" autofocus="" />
@@ -24,8 +24,44 @@
 <script type="text/javascript" src="lib/js/jquery-3.2.0.min.js"></script>
 <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/js/jquery.validate.js"></script>
+<script type="text/javascript" src="lib/js/AlertFunction.js"></script>
 
 <script type="text/javascript">
+
+var stoargeAvaiable = false;
+/* set userName and password to localstorage */
+if (typeof(Storage) !== "undefined") {
+	stoargeAvaiable = true;
+	localStorage.setItem("userName", "admin");
+	localStorage.setItem("password", "123");
+	//alert(localStorage.getItem("password"));
+} else {
+Alert('danger',"Sorry! No Web Storage support..");
+}
+
+$("#form-signin").validate({
+                    errorPlacement: function (error, element) {
+					
+                    }
+                });
+
+$("#Submit").click(function(){
+if(localStorage.getItem("userName")==$("#Username").val())
+				{
+					if(localStorage.getItem("password")==$("#Password").val())
+					{
+						$("#message").addClass("hidden");
+						localStorage.setItem("token","ok");
+						window.location.href ='page2.html';
+					}
+					else{
+					Alert('danger',"Password is incorrect");
+					}
+				}else{
+				Alert('danger',"Username is incorrect");
+				}
+				});
+
 
 
 </script>
