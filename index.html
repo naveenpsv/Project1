@@ -53,11 +53,16 @@
                         $("#message").addClass("hidden");
                         localStorage.setItem("token", "ok");
                         window.location.href = 'page2.html';
+                        return true;
                     } else {
+                        
                         Alert('danger', "Password is incorrect");
+                        return false;
                     }
                 } else {
+                    
                     Alert('danger', "Username is incorrect");
+                    return false;
                 }
             });
         </script>

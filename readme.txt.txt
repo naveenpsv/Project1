@@ -6,3 +6,4 @@ how to use
 	password:123
 3. Fill agentname and other details
 4. Fill required info on 3rd page
+5. Once click save or submit then system will save file to local
