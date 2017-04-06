@@ -12,7 +12,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span> 
                     </button>
-                    <a target="_blank" href="#" class="navbar-brand">HLC Tracker.</a>
+                    <a target="_blank" href="javascript:void(0);" class="navbar-brand">HLC Tracker.</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
@@ -41,12 +41,15 @@
                     <fieldset>
                         <!-- Form Name -->
                         <legend>
-                            <h3>Welcome to E-Health Insurance Tracker - <h2><strong><span id="name"></span></strong></h2></h3>
+                            <h3>Welcome to E-Health Insurance Tracker - <strong><span id="name"></span></strong></h3>
                         </legend>
+                         
+                         <h4>Enter the data in appropriate field</h4><br/>
                          <div id="message" class="hidden error_message"></div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div>
+                                    
                                     <!-- Text input-->
                                     <div class="form-group">
                                         <label class="col-md-4 control-label" for="fn">Application ID</label>
@@ -326,7 +329,7 @@
             {
                 if($("#form-page3").valid())
                 {
-                    downloadCSV({ filename: "stock-data.csv" });
+                    downloadCSV({ filename: localStorage.getItem("Agentname")+".csv" });
                 }
                 else{
                     Alert('danger', 'Fill all required fields');
