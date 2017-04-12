@@ -2,6 +2,20 @@
 	margin-top: 80px;
 	margin-bottom: 20px;
 }
+img.homescreen-img {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  /*  position: absolute; */
+    right: 0;
+    top: 0;
+}
+
+.loading-txt{
+    color: white;
+    text-align: center;
+    vertical-align: central;
+}
 
 .form-signin {
   max-width: 420px;
