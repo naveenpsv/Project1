@@ -3,7 +3,7 @@
         <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="lib/css/custom.css">
     </head>
-    <body>
+    <body class="health-body">
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container"> 
                 <div class="navbar-header">
@@ -36,20 +36,21 @@
         </div>
         <div class = "container">
             <div class="wrapper">
-               
-                <form class="form-horizontal" id="form-page3">
+
+                <form class="form-horizontal form-page3" id="form-page3">
                     <fieldset>
                         <!-- Form Name -->
                         <legend>
-                            <h3>Welcome to E-Health Insurance Tracker - <strong><span id="name"></span></strong></h3>
+                            <h3 class="legend-h3">Welcome to E-Health Insurance Tracker - <strong><span id="name"></span></strong></h3>
+                            <img src="lib/Assets/images/health.jpg" class="img-responsive img-rounded small-image">
                         </legend>
-                         
-                         <h4>Enter the data in appropriate field</h4><br/>
-                         <div id="message" class="hidden error_message"></div>
+
+                        <h4>Enter the data in appropriate field</h4><br/>
+                        <div id="message" class="hidden error_message"></div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div>
-                                    
+
                                     <!-- Text input-->
                                     <div class="form-group">
                                         <label class="col-md-4 control-label" for="fn">Application ID</label>
@@ -97,6 +98,12 @@
                                         <label class="col-md-4 control-label" for="city">Direct/Link Payment</label>
                                         <div class="col-md-6">
                                             <input id="DirectOrLinkPayment" name="DirectOrLinkPayment" type="text" placeholder="" class="form-control input-md" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="city">EMP ID</label>
+                                        <div class="col-md-6">
+                                            <input id="EmpId" name="EmpId" type="number" placeholder="Allow only Numeric Value" class="form-control input-md" required="required">
                                         </div>
                                     </div>
                                 </div>
@@ -249,6 +256,26 @@
                 }
 
             });
+
+            $("#EmpId").blur(function ()
+            {
+                var filter = /^[0-9]*\.?[0-9]*$/;
+                var filter1 = /^[a-zA-Z\s]*$/;
+                var validate = "";
+                if (filter.test($(this).val()) && !filter1.test($(this).val())) {
+                    validate = true;
+                } else {
+                    Alert('danger', 'Invalid Value');
+                    validate = false;
+                    $(this).val('');
+                    $(this).focus();
+                    $(this).addClass('error');
+                }
+
+            });
+
+
+
             $("#Tenure").blur(function ()
             {
                 var filter = /^[0-9]*\.?[0-9]*$/;
@@ -325,13 +352,14 @@
                 document.body.appendChild(link);
                 link.click();
             }
-            $(".export").click(function()
+            $(".export").click(function ()
             {
-                if($("#form-page3").valid())
+
+                if ($("#form-page3").valid())
                 {
-                    downloadCSV({ filename: localStorage.getItem("Agentname")+".csv" });
-                }
-                else{
+
+                    downloadCSV({filename: localStorage.getItem("Agentname") + '_' + localStorage.getItem("CampaignVal") + ".csv"});
+                } else {
                     Alert('danger', 'Fill all required fields');
                 }
             });
