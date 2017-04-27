@@ -1,12 +1,12 @@
 .wrapper {    
-	margin-top: 80px;
-	margin-bottom: 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
 }
 img.homescreen-img {
     bottom: 0;
     left: 0;
     margin: auto;
-  /*  position: absolute; */
+    /*  position: absolute; */
     right: 0;
     top: 0;
 }
@@ -18,46 +18,46 @@ img.homescreen-img {
 }
 
 .form-signin {
-  max-width: 420px;
-  padding: 30px 38px 66px;
-  margin: 0 auto;
-  background-color: #eee;
-  border: 3px dotted rgba(0,0,0,0.1);  
-  }
+    max-width: 420px;
+    padding: 30px 38px 66px;
+    margin: 0 auto;
+    /*background-color: #eee;
+    //border: 3px dotted rgba(0,0,0,0.1);  */
+}
 
 .form-signin-heading {
-  text-align:center;
-  margin-bottom: 30px;
+    text-align:center;
+    margin-bottom: 30px;
 }
 
 .form-control {
-  position: relative;
-  font-size: 16px;
-  height: auto;
-  padding: 10px;
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
 }
 
 input[type="text"] {
-  margin-bottom: 0px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+    margin-bottom: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 input[type="password"] {
-  margin-bottom: 20px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .colorgraph {
-  height: 7px;
-  border-top: 0;
-  background: #c4e17f;
-  border-radius: 5px;
-  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    height: 7px;
+    border-top: 0;
+    background: #c4e17f;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
 .error {
     border: 2px solid #f00;
@@ -89,4 +89,41 @@ input[type=number] {
 }
 .legend-h3{
     display: inline;
+}
+.bankbaz-img{
+    float:left;
+}
+.loading-txt1 {
+    margin-top: -160px;
+    color: #0000ff;
+}
+.text-align-center{
+    text-align: center;
+}
+.login-page-back{
+    background-color: black;
+}
+.btn-prim{
+    background-color: #ED7D31 !important;
+}
+.login_puzzle1{
+    height: 75%;
+    width:90%;
+}
+#page3{ 
+    background: url(page3.png) no-repeat center center fixed; 
+
+}
+.loading-txt2 {
+    margin-left: 585px;
+    margin-top: 550px;
+}
+.ch{
+    height: 130px;
+    width: 60px;
+    display: inline;    
+}
+.wel-div{
+    border-bottom: 2px solid #ED7D31;
+    border-top: 2px solid #ED7D31;
 }
